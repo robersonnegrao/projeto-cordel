@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive; /* copiado do Google Fonts junto com as importações acima */
+    --fonte3: 'Sriracha', cursive; /* copiado do Google Fonts junto com as importações acima */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+} /* tira espaços sobre e nas laterais do header */
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    /* text-transform: uppercase; para todoas as letras em maiscúlo  */
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    /* font-size: 4em; tamanho fixo  */
+    font-size: 10vw; /* 10% da largura da tela, ficando responsivo */
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a {
+    color: white; /* tirar o azul padrão */
+    text-decoration: none; /* tirar sublinhado padrão */
+    font-weight: bolder; /* negrito */
+} /* inclui o header e o footer, ou pode ser: header a {} e footer a {} */
+
+a:hover {
+    text-decoration: underline;
+} /* inclui o header e o footer, ou pode ser: header a:hover {} e footer a:hover {} */
+
+section {
+    padding-top: 10vh; /* 10% da altura da tela */
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    /* font-size: 2em;  */
+    font-size: 3.5vw; /* responsivo, mas o melhor seria media query */
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13 px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    /* width: 400px; retrirado para incluir o inline  */
+    display: inline-block; /* caixa que se adapta ao tamanho da tela */
+    padding: 10px; /* incluido para dar uma margem ao texto dento do display */
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
